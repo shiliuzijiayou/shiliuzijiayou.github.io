@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻动态</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<style>
+    /* CSS样式 */
+    .search-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
+    .search-input {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      transition: box-shadow 0.3s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .search-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #aa2e2e;
+      color: #FEFEFE;
+      border: none;
+      border-radius: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .search-button:hover {
+      background-color: #972A2A;
+    }
+    .tail{
+        margin-bottom: 0px;
+    }
+  </style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><a href="index.html"><img src="img/logo-1.png"></a></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p style="font-size: 20px;">网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p style="font-size: 20px;">剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="game1.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">蕲艾益乡</a></li>
+                <li><a href="game2.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <!--缩小后会出现一个菜单小栏-->
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			/*$(".content").animate({marginLeft:290,},500).css("width","calc(100% - 290px)");
+			$(".content").addClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			/*$(".content").animate({marginLeft:0,width:'100%',},500);
+			$(".content").removeClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">     
+        <div class="box">
+        	<div class="main">
+                <div class="search-form">
+                    <form id="searchForm" action="/search" method="get">
+                      <input class="search-input" type="text" name="query" placeholder="搜索...">
+                      <input class="search-button" type="submit" value="搜索" onclick="return false;">
+                    </form>
+                </div>
+            	<ul class="list">
+                	<li>
+                    	<a href="news-1.html">
+                        	<div class="left-img"><img src="img/1.png"></div>
+                            <div class="right-info">
+                            	<h2>“破壁”千年纹样 焕新非遗传承</h2>
+                                <p>踏遍山区收集传统纹样，攻克手持纹样扫描仪等难题，生成算法开发建设纹样库，创新色釉料及制陶工艺，提升产品附加值……近日，在第六届中国青年志愿服务公益创业赛全国赛上，武汉理工大学“非遗所思”志愿服务队的《武陵窑开，纹遍九州——民族纹样库赋能武陵山区制陶产业》项目荣获银奖。</p>
+                                <span>2023-12-18</span>
+                                <span>湖北日报</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="news-2.html">
+                        	<div class="left-img"><img src="img/2.png"></div>
+                            <div class="right-info">
+                            	<h2>新匠人飞针走线&nbsp;老手艺因趣生情</h2>
+                                <p>王炜佳，国家级非遗项目汉绣市级代表性传承人，工艺美术师，武汉汉绣艺术有限公司总经理。外公任本荣是汉绣国家级非遗代表性传承人，母亲任炜是汉绣省级传承人。2015年起至今，王炜佳担任武汉汉绣艺术研究院与武汉市第一聋哑学校联合开办的汉绣班技法老师，培养汉绣技术人才。</p>
+                                <span>2023-12-16</span>
+                                <span>湖北日报</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="news-3.html">
+                        	<div class="left-img"><img src="img/3.png"></div>
+                            <div class="right-info">
+                            	<h2>非遗民俗文化激活古村经济</h2>
+                                <p>12月6日，房县军店镇民俗文化表演队穿行下店子古村落，秧歌、船灯等表演热闹非凡（如图），街上人头攒动，争相观看非遗民俗节目。下店子村落始建于唐朝，鼎盛于明清，已有1300多年历史，自古以来是通往川陕的重要驿站。</p>
+                                <span>2023-12-15</span>
+                                <span>十堰日报</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/4.jpg"></div>
+                            <div class="right-info">
+                            	<h2>罗田吊锅为啥不能“论斤卖”？</h2>
+                                <p>熊熊蔸子火，浓浓吊锅情。地道正宗的罗田吊锅，其味道堪称一绝，其名气也盛极一时。时隔多年，声名远扬的罗田吊锅却依然停留在“小打小闹”的粗放型经营阶段。“吊锅流行‘论锅卖’很多年了，这个传统的销售方式好难改变。”12月5日，罗田胜利吊锅城董事长吴美莲告诉记者。</p>
+                                <span>2023-12-14</span>
+                                <span>黄冈日报</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/5.png"></div>
+                            <div class="right-info">
+                            	<h2>蕲春非遗赋能就业增收</h2>
+                                <p>近年来，蕲春县深挖李时珍和本草纲目等优秀中医药文化，推广健康养生理念，推动蕲春艾灸疗法入选国家非遗目录。蕲春艾灸师是蕲春艾灸疗法的活态传承，带动就业创业30多万人。</p>
+                                <span>2023-12-13</span>
+                                <span>黄冈日报</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="left-img"><img src="img/3.jpg"></div>
+                            <div class="right-info">
+                            	<h2>台前绽放山茶花俯身培土促新芽</h2>
+                                <p>12月7日，原创青春版阳新采茶戏《九瓣莲》在武汉京韵大舞台首演，十七八岁的少年演员们登上舞台。唱腔正统，剧情紧凑，营造全剧氛围的音乐富于变化，舞台光效追随演员，有传统与现代结合之美，服饰设计则采用了国家级非物质文化遗产阳新布贴，演员们一招一式尽显功底，灵气逼人。</p>
+                                <span>2023-12-11</span>
+                                <span>湖北日报</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            	<ul class="page">
+                    <li><i class="change"></i><a href="#"><</a></li>
+                    <li><i class="change"></i><a class="selected" href="#">1</a></li>
+                    <li><i class="change"></i><a href="#">2</a></li>
+                    <li><i class="change"></i><a href="#">></a></li>
+                </ul>
+            </div>
+            <div class="rcom">
+            	<h1>线上讲座 <i class="xian" style="background:rgba(0,0,0,0.2);"></i></h1>
+            	<hr align="left">
+            	<div class="rcom-bd">
+                	<ul class="rcom-list">
+                    	<li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/13.png"></div>
+                                <div class="right-info">
+                                    <h2>互联网与非遗，以小红绣为例|主讲人彭肖肖（小红绣品牌创始人）</h2>
+                                    <span>2024-01-01</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/11.jpg"></div>
+                                <div class="right-info">
+                                    <h2>恩施玉露复兴之路|主讲人张文旗（恩施玉露茶产业协会会长）</h2>
+                                    <span>2024-01-02</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/14.png"></div>
+                                <div class="right-info">
+                                    <h2>非遗融入现代生活产品与市场创新|主讲人陈静（湖北省文化遗产保护研究会副会长）</h2>
+                                    <span>2024-01-03</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/15.png"></div>
+                                <div class="right-info">
+                                    <h2>传统工艺振兴语境下荆楚手工艺的传承与发展|主讲人陈日红（湖北美术学院教授）</h2>
+                                    <span>2024-01-04</span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/16.png"></div>
+                                <div class="right-info">
+                                    <h2>长盛川，努力让老字号焕发新生机|主讲人何建刚（省级非遗传承人、鑫鼎生物科技有限公司董事长）</h2>
+                                    <span>2024-01-05 </span>
+                                </div>
+                            </a>
+                    	</li>
+                        <li>
+                    		<a href="#">
+                                <div class="left-img"><img src="img/17.png"></div>
+                                <div class="right-info">
+                                    <h2>非遗传承的小麻花，互联网思维的大格局|主讲人杨欢（虎福瑞麻花制作技艺传承人）</h2>
+                                    <span>2023-01-06</span>
+                                </div>
+                            </a>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+				jQuery(".rcom").slide({mainCell:".rcom-bd ul",autoPage:true,effect:"topLoop",autoPlay:2000,vis:5,trigger:"click"});
+			</script>
+        </div>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="game2.html">绣启新篇</a></p>
+                <p><a href="case-list.html">精选案例</a>&nbsp;&nbsp;<a href="news-list.html">新闻动态</a></p>
+                <p><a href="product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

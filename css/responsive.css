@@ -1,0 +1,117 @@
+/*==============================================================================
+
+ * Template Name: Creatopo- Agency and Business HTML5 Template
+ * Author: ixtheme - (https://themeforest.net/user/theuxlab)
+ * Description: Agency and Business HTML5 Template
+ * Version: 1.0
+ * Copyright 2019 theuxlab
+
+ ==============================================================================*/
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1199px) {
+ 
+
+  .wrap-gap.pr-70 {
+    padding-right: 50px !important;
+  }
+
+  .wrap-gap.pl-70 {
+    padding-left: 50px !important;
+  }
+
+  
+}
+
+/* Large devices (desktops, 991px and down) */
+
+@media (max-width: 991px) {
+
+ 
+  .wrap-gap.pr-70 {
+    padding-right: 0 !important;
+  }
+
+  .wrap-gap.pl-70 {
+    padding-left: 0 !important;
+  }
+
+  
+  .case-study-sidebar {
+    margin-bottom: 50px;
+  }
+
+  .case-study-item-info p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .case-study-item-info a {
+    margin-top: 25px;
+  }
+
+  .case-study-sidebar h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  
+}
+
+/* Medium devices (tablets, 768px and down) */
+
+@media (max-width: 767px) {
+
+ 
+  .case-study-item-img {
+    margin-bottom: 35px;
+  }
+
+  .wrap-gap.pr70 .blog-post-img {
+    margin-bottom: 35px;
+  }
+
+  
+  .case-study-item-pop {
+    margin-top: 10px;
+  }
+
+  .case-study-item-pop h4 {
+    font-weight: 500;
+  }
+
+  .case-study-item-img img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .case-study-item-info p,
+  .case-study-item-info a {
+    margin-top: 15px;
+  }
+  
+  .case-study-item {
+    margin-bottom: 40px;
+  }
+
+  
+}
+
+
+  
+/* extraSmall devices ( 400px and down) */
+@media (max-width: 400px) {
+
+  .case-study-wrapper-2 .zoom-gallery .col-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+ 
+  .case-study-img.mt-0 {
+    margin-top: 35px !important;
+  }
+}

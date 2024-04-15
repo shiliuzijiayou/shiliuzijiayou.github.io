@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻详情</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><img src="img/logo-1.png"></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p style="font-size: 20px;">网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p style="font-size: 20px;">剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="game1.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">蕲艾益乡</a></li>
+                <li><a href="game2.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			/*$(".content").animate({marginLeft:290,},500).css("width","calc(100% - 290px)");
+			$(".content").addClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			/*$(".content").animate({marginLeft:0,width:'100%',},500);
+			$(".content").removeClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix">
+            <li class="nav-select"><a href="#">新闻详情</a></li>
+            <li>
+            	<i class="change"></i>
+            	<a href="news-list.html" style="font-family: kaiti;">>> 返回上一级</a>
+            </li>
+        </ul>
+        <div class="box">
+        	<div class="main2">
+            	<h1>“破壁”千年纹样&nbsp;焕新非遗传承
+                	<div class="info"><span id="date">2023-12-18</span><span id="writer"><a href="https://epaper.hubeidaily.net/pc/content/202312/18/content_256565.html" style="text-decoration: none; color: inherit;">阅读原文</a></span></div>
+                	<i class="xian" style="background:rgba(0,0,0,0.2);"></i>
+                </h1>
+                <div class="txt-box">
+                	<p>	武汉理工大学“非遗所思”志愿服务队成立于2018年，坚持“学科支撑、基地保障、专业支持、企业参与”，已招募大学生志愿者800余人次，由大学生主导的非遗传承、创新、市场转化的全链条保护项目多次荣获全国大赛金奖、银奖等奖项。</p>
+                    <img src="img/1.png">
+                    <h2 style="font-size: 20px;">守望者名片</h2><br>
+                    <p>	踏遍山区收集传统纹样，攻克手持纹样扫描仪等难题，生成算法开发建设纹样库，创新色釉料及制陶工艺，提升产品附加值……近日，在第六届中国青年志愿服务公益创业赛全国赛上，武汉理工大学“非遗所思”志愿服务队的《武陵窑开，纹遍九州——民族纹样库赋能武陵山区制陶产业》项目荣获银奖。</p>
+					<p>“传承传统文化，最重要的便是将它普及开来，以全新的面貌融合于时代。”12月14日，武汉理工大学艺术与设计学院实验中心副主任王凯平介绍，自2018年起，在湖北省非物质文化遗产研究中心武汉理工大学中心和学院团委的指导下，依托学院青年志愿者协会组建了“非遗所思”志愿服务队，创新形式开展非物质文化遗产的保护和传承工作，为非遗在新时代传承注入青春力量，增强了当代青年的文化自信。</p>
+
+                    <h2 style="font-size: 20px;">研发手持扫描仪&nbsp;建设民族纹样库</h2><br>
+					<p>龙凤纹寓意龙凤呈祥，葫芦纹象征多子多福……古人从自然中寻找灵感，结合世间的美好祝愿绘成纹样，在建筑、瓷器、书画、服饰等领域表达着传统文化之美。</p>
+                    <p>“时代的车轮滚滚向前，一些在偏远山区流传的纹样渐渐没有了载体，许多稀有纹样销声匿迹。”《武陵窑开，纹遍九州——民族纹样库赋能武陵山区制陶产业》项目负责人邓江龙介绍，志愿服务队的同学们5年来一直接力收集传统纹样。同学们集思广益，想到将纹样与武陵山区制陶产业联合。</p>
+                    <p>“我们依托武汉理工大学材料科学与工程学科，借助艺术设计学科优势，以纹样创新设计赋能武陵山区制陶产业。”水族姑娘、项目答辩人莫语欣说，同学们有的来自山区、有的是少数民族，大家想到，从恩施利川到湘西龙山，再到重庆荣昌、黔江，武陵山区制陶产业历史悠久，当下面临后继无人的困境。</p>
+                    <p>长久赋能非遗文化保护，需要将其融入产业。在非遗研究中心老师和学校陶瓷艺术梦工场刘志哲博士指导下，团队先后研发了手持纹样扫描仪，攻克了电脑接收生成纹样、后端处理保存纹样等一系列难题。引入传统纹样生成算法，开发建设“纹语”武陵山区非遗纹样库。利用3D制陶打印技术实现武陵山区民族纹样的活化与再造。运用学校材料专业的优势，创新色釉料及制陶工艺，提升产品附加值。</p>
+                    <p>“我们免费向陶农开放纹样数据库，开展新型陶产品制作培训。”邓江龙说，降低了制作成本，就可以让传统纹样陶器融入日常生活中，带动非遗手工艺人提质增收，实现非物质文化遗产的保护与利用。</p>
+                    <p>5年来，这一项目累计培养50余名核心志愿者，收集1000余种少数民族纹样，成功打造纹样陶产品40余款，获软件著作权2个、国家专利5件、直接带动就业岗位20个，间接带动就业岗位2180个。</p>
+
+                    <h2 style="font-size: 20px;">小设计撬动大非遗&nbsp;传统文化炫起来</h2><br>
+                    <p>一张年画，一个故事，蕴含浓厚的民俗文化气息，老河口木版年画是国家级非物质文化遗产，传承人陈洪斌对于年画传承碰到的问题有些无奈：“过去在农村，一到过年，家家户户都要贴年画，现在木版年画实用性降低，传承和发展也就成为问题。”</p>
+                    <P>在湖北省非物质文化遗产研究中心武汉理工大学中心，老河口木版年画、黄梅挑花、江汉皮影等荆楚非遗变身联名盲盒、文具、饰品，背包、抱枕等，牢牢锁定年轻人的视线。这是“非遗所思”志愿服务队结合国潮设计趋势和青年审美，打造的“荆楚非遗×武理设计”公益联名品牌，已开发文创产品52类。</P>
+                    <p>“结合国潮设计趋势的文创产品让非遗变得有趣、炫起来！”骨干队员、武汉理工大学艺术与设计学院青年志愿者协会负责人高珊珊说，大家还联合贴近年轻人生活的时尚品牌，设计荆楚非遗外包装插画，在市场上广受欢迎。</p>
+                    <p>为破解非遗项目保护“政府出资、项目自生、社会不知、传承无力”的社会痛点，服务队依托艺术设计专业优势，坚持“活态传承”理念，期望以“小设计”撬动“大非遗”，让非遗更有趣。这群胸怀梦想的学子将传统手工艺和现代生活理念相互融合，骨干队员王雯芳等研究生志愿者联合湖北、湖南、江西、安徽四省竹编非遗传承人打造竹编作品120余件；共建“荆楚非遗文化资源库”，收录湖北非遗名录80项、非遗传承人67名、研究专家50名等资源。</p>
+                    <p>“非遗要真正活起来，就要不断创新传承方式和载体，打造全链条非遗保护生态。”湖北省非物质文化遗产研究中心武汉理工大学中心研究员王适思博士说，服务队队员们不仅定期组织荆楚非遗展演进校园、进社区活动，开设淘宝店，还设计了卡通吉祥物“楚楚”，制作非遗宣传短视频，建设非遗文化传播的新媒体矩阵，向同龄人宣传展示荆楚非遗文化魅力。“非遗文化是中国传统文化的宝贵财富，这些老祖宗留下的财富与匠心精神，需要让年轻一代感兴趣并愿意主动继承，才能生生不息，薪火相传。”</p>
+               	</div>
+                <div class="otherPage">
+                	<a href="#" class="prev-page">上一篇：<span>没有了</span></a>
+                    <a href="news-2.html" class="next-page">下一篇：<span>新匠人飞针走线&nbsp;老手艺因趣生情</span></a>
+                </div>
+            </div>
+       	</div>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="game2.html">绣启新篇</a></p>
+                <p><a href="case-list.html">精选案例</a>&nbsp;&nbsp;<a href="news-list.html">新闻动态</a></p>
+                <p><a href="product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>

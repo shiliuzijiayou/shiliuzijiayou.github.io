@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>传统戏剧</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><a href="../index.html"><img src="img/logo-1.png"></a></div>
+    <ul class="nav">
+        <li>
+            <a href="../index.html">
+                <p>网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p>剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="../game1.html" style="font-size: 16px;font-family: 'kaiti', serif;">蕲艾益乡</a></li>
+                <li><a href="../game2.html" style="font-size: 16px;font-family: 'kaiti', serif;">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="../case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="../news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="../product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix" style="font-size: 16px;font-family: kaiti;">
+            <li>
+            	<i class="change"></i>
+            	<a href="../product-list.html">概况</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="民间文学.html">民间文学</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统音乐.html">传统音乐</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统舞蹈.html">传统舞蹈</a>
+            </li>
+            <li  class="nav-select">
+            	<i class="change"></i>
+            	<a href="#">传统戏剧</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="曲艺.html">曲艺</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统体育.html">传统体育</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统美术.html">传统美术</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统技艺.html">传统技艺</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="传统医药.html">传统医药</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="民俗.html">民俗</a>
+            </li>
+        </ul>
+        <ul class="pro-list">
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13281/">
+                    <div class="pro-img">
+                        <img src="img/25.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>黄梅戏</h2>
+                            <p>黄梅县</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13279/">
+                    <div class="pro-img">
+                        <img src="img/26.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>荆州花鼓戏</h2>
+                            <p>潜江市</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13277/">
+                    <div class="pro-img">
+                        <img src="img/27.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>楚剧</h2>
+                            <p>湖北省</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13213/">
+                    <div class="pro-img">
+                        <img src="img/28.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>汉剧</h2>
+                            <p>武汉市</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+           	<li>
+            	<a href="https://www.ihchina.cn/project_details/13398/">
+                    <div class="pro-img">
+                        <img src="img/29.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>皮影戏（江汉平原皮影戏）</h2>
+                            <p>潜江市</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13533/">
+                    <div class="pro-img">
+                        <img src="img/30.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>提琴戏</h2>
+                            <p>崇阳县</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13531/">
+                    <div class="pro-img">
+                        <img src="img/31.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>南剧</h2>
+                            <p>咸丰县</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+            <li>
+            	<a href="https://www.ihchina.cn/project_details/13215/">
+                    <div class="pro-img">
+                        <img src="img/32.png">
+                    </div>
+                    <div class="pic-txt">
+                        <i></i>
+                        <div class="txt-left">
+                            <h2>汉调二簧</h2>
+                            <p>竹溪县</p>
+                        </div>
+                  </div>
+           		</a>
+           	</li>
+        </ul>
+        <ul class="page">
+        	<li><i class="change"></i><a href="#"> < </a></li>
+            <li><i class="change"></i><a class="selected" href="#">1</a></li>
+            <li><i class="change"></i><a href="#">2</a></li>
+            <li><i class="change"></i><a href="#">></a></li>
+        </ul>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="../index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="../game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="../game2.html">绣启新篇</a></p>
+                <p><a href="../case-list.html">精选案例</a>&nbsp;&nbsp;<a href="../news-list.html">新闻动态</a></p>
+                <p><a href="../product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>

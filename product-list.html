@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>荆楚非遗</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><a href="index.html"><img src="img/logo-1.png"></a></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p>网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p>剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="game1.html" style="font-size: 16px;font-family: 'kaiti', serif;">蕲艾益乡</a></li>
+                <li><a href="game2.html" style="font-size: 16px;font-family: 'kaiti', serif;">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix" style="font-size: 16px;font-family: kaiti;">
+            <li class="nav-select"><a href="#">概况</a></li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/民间文学.html">民间文学</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统音乐.html">传统音乐</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统舞蹈.html">传统舞蹈</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统戏剧.html">传统戏剧</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/曲艺.html">曲艺</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统体育.html">传统体育</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统美术.html">传统美术</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统技艺.html">传统技艺</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/传统医药.html">传统医药</a>
+            </li>
+            <li>
+            	<i class="change"></i>
+            	<a href="ml/民俗.html">民俗</a>
+            </li>
+        </ul>
+        <div class="txt-box">
+        	<h1 style="text-align: center;">湖北省非物质文化遗产概况</h1>
+            <p style="color: #B99777;font-size: 18px;">一、湖北省非物质文化遗产数量</p>
+            <p>目前，湖北省有人类非物质文化遗产代表作名录4项、国家级名录100项(127个项目保护单位)，省级名录347项（546个项目保护单位），有国家级项目代表性传承人57人，省级项目代表性传承人571人，有国家级文化生态保护实验区1个，省级文化生态保护实验区13个，国家级非物质文化遗产生产性保护示范基地5个，省级非物质文化遗产生产性保护示范基地19个，22个非物质文化遗产研究中心。</p>
+            <p style="color: #B99777;font-size: 18px;">二、非物质文化遗产十大类别</p>
+            <p>Ⅰ民间文学</p>
+            <p>民间文学又称口头文学，主要通过口耳相传的方式产生并流传于民间。其形式丰富多样，包括神话、传说、民间故事、史诗、长诗、歌谣、民间笑话、民间谚语、谜语、歇后语等。湖北有代表性的民间文学项目有董永传说、屈原传说、王昭君传说、炎帝神农传说、伍家沟民间故事、黄鹤楼传说、黑暗传等。</p>
+            <p>Ⅱ传统音乐</p>
+            <p>传统音乐是指产生并流传于民间的各种音乐样式，包括民间歌曲、民间器乐曲、舞蹈音乐、戏曲音乐、曲艺音乐和民间祭祀仪式音乐等。它主要是通过口头创作方式产生和传播，地域性、流变性、通俗性、程式性等是民间音乐的主要标志。湖北有代表性的传统音乐有武当山宫观道乐、枝江民间吹打乐、宜昌丝竹、兴山民歌、薅草锣鼓、老河口丝弦、马山民歌、唢呐艺术、锣鼓艺术等。</p>
+            <p>Ⅲ传统舞蹈</p>
+            <p>传统舞蹈是广大劳动人民所创造的、世代相传的，在日常生活场所表演的各种传统舞蹈，它是民族民间文化的重要组成部分，包括生活习俗舞蹈、岁时节令习俗舞蹈、人生礼仪舞蹈、宗教信仰舞蹈、生产习俗舞蹈等。湖北有代表性的传统舞蹈有土家族撒叶儿嗬、肉连响、高龙、土家族摆手舞、郧阳凤凰灯、麻城花挑、宣恩土家族八宝铜铃舞等。</p>
+            <p>Ⅳ传统戏剧</p>
+            <p>传统戏剧指的是中国各地域各民族人民创造的传统戏曲艺术。它综合了文学、音乐、舞蹈、绘画、雕塑、杂技、武术等元素，讲究唱念做打，具有很强的程式性和技术性。流传湖北的传统戏剧有汉剧、京剧、楚剧、花鼓戏、黄梅戏、皮影戏、提琴戏、傩戏、采茶戏、汉调二簧等。</p>
+            <p>Ⅴ曲艺</p>
+            <P>曲艺是中国民族民间各种说唱艺术的总称，是由民间口头文学和歌唱艺术经过长期的演化发展而成的一种独特的表演艺术形式，本质特征是口头语言进行的说唱表演。它具有民间性、通俗性、一人多角、化出化入、说唱为主、简便易演等特点。湖北有代表性的曲艺项目有汉川善书、 湖北评书、湖北大鼓、湖北小曲、南曲、恩施扬琴、鼓盆歌、三棒鼓等。</P>
+            <p>Ⅵ传统体育、游艺与杂技</p>
+            <p>它包括传统武术、传统竞技、传统体育、游艺、杂技、魔术、马戏、乔装戏、滑稽等，具有深厚的传统和悠久的历史，具有广泛的民众基础。湖北的传统体育项目主要有武当武术和岳家拳等。</p>
+            <p>Ⅶ传统美术</p>
+            <p>传统美术是广大民众创造的各种视觉造型艺术，大体上可分为民间绘画、民间雕塑、民间工艺、民间建筑四大类，包括广泛流传于各民族、各地域的剪纸、年画、泥人、泥塑、刺绣、编织、风筝、玩具、民居建筑装饰等。湖北的代表性项目有雕花剪纸、大冶石雕、天门糖塑、黄梅挑花、红安绣活、阳新布贴、武汉木雕船模、老河口木版年画、汉绣等。</p>
+            <p>Ⅷ传统技艺</p>
+            <P>传统技艺指历史上传承下来的手工业技术与工艺。包括工具和机械制作；农畜产品加工；烧造；织染缝纫；金属工艺；编织扎制；髹漆；造纸、印刷和装帧；制盐、制笔、制墨、颜料制备、火药制备、烟花爆竹制作等其他各类工艺。湖北的代表性项目有土家族吊脚楼营造技艺、铅锡刻镂技艺、楚式漆器髹饰技艺、高洪太铜锣制作技艺、蕲春管窑手工制陶技艺、凤筝制作技艺等。</P>
+            <p>Ⅸ传统医药</p>
+            <P>传统医药主要指中医中药以及一些少数民族的传统医学药学，它属于传统民间知识体系中的一个重要组成部分，具有很高的科学认识价值和实践价值。湖北传统医药的代表性项目有马应龙眼药制作技艺、夏氏丹药制作技艺、武当山道教医药等。</P>
+            <p>Ⅹ民俗</p>
+            <p>民俗是指流行于民间的风俗习惯，他蕴藏于民众生活之中，是民间传统文化的主要内容。民俗包括的范围十分广泛，有生产商贸习俗、消费习俗、人生礼俗、岁时节令、民间知识、民间信仰等。湖北有代表性的民俗活动有屈原故里端午习俗、西塞神舟会、武当山庙会、随州神农祭典、汉阳归元庙会、当阳关陵庙会、嫘祖信俗等。</p>
+        </div>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="game2.html">绣启新篇</a></p>
+                <p><a href="case-list.html">精选案例</a>&nbsp;&nbsp;<a href="news-list.html">新闻动态</a></p>
+                <p><a href="product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>

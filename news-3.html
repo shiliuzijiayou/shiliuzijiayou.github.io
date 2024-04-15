@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻详情</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><img src="img/logo-1.png"></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p style="font-size: 20px;">网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p style="font-size: 20px;">剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="game1.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">蕲艾益乡</a></li>
+                <li><a href="game2.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			/*$(".content").animate({marginLeft:290,},500).css("width","calc(100% - 290px)");
+			$(".content").addClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			/*$(".content").animate({marginLeft:0,width:'100%',},500);
+			$(".content").removeClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix">
+            <li class="nav-select"><a href="#">新闻详情</a></li>
+            <li>
+            	<i class="change"></i>
+            	<a href="news-list.html" style="font-family: kaiti;">>> 返回上一级</a>
+            </li>
+        </ul>
+        <div class="box">
+        	<div class="main2">
+            	<h1>非遗民俗文化激活古村经济
+                	<div class="info"><span id="date">2023-12-15</span><span id="writer"><a href="https://syrb.10yan.com/html/20231215/178337.html" style="text-decoration: none; color: inherit;">阅读原文</a></span></div>
+                	<i class="xian" style="background:rgba(0,0,0,0.2);"></i>
+                </h1>
+                <div class="txt-box">
+                    <p>12月6日，房县军店镇民俗文化表演队穿行下店子古村落，秧歌、船灯等表演热闹非凡（如图），街上人头攒动，争相观看非遗民俗节目。</p>
+					<p>下店子村落始建于唐朝，鼎盛于明清，已有1300多年历史，自古以来是通往川陕的重要驿站。</p>
+                    <p>近年来，房县通过举办“三月三”显圣殿民间文化艺术节、下店子民俗摄影展等民俗文化活动，传承、宣传古街文化，激活“石牌坊、百步梯、六角亭、望母楼、老街书屋、房山草堂、景观水系”等21项重点古街观景点，使古村华丽“蝶变”。</p>
+                    <p>此前，下店子被评为“中国传统村落”，成为“网红打卡地”，入驻经营主体近30家，开设餐饮店、民宿，销售黄酒、工艺品等，吸引来自北京、天津、广东等地游客观光，带动了农民增收。</p>
+                    <img src="img/3.png">
+                    <img src="img/3-1.png">
+                    <img src="img/3-2.png">
+                    <img src="img/3-3.png">
+               	</div>
+                <div class="otherPage">
+                	<a href="news-2.html" class="prev-page">上一篇：<span>新匠人飞针走线&nbsp;老手艺因趣生情</span></a>
+                    <a href="news-3.html" class="next-page">下一篇：<span>罗田吊锅为啥不能“论斤卖”？</span></a>
+                </div>
+            </div>
+       	</div>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="game2.html">绣启新篇</a></p>
+                <p><a href="case-list.html">精选案例</a>&nbsp;&nbsp;<a href="news-list.html">新闻动态</a></p>
+                <p><a href="product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>

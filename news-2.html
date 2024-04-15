@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻详情</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/child.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body style="background-color:#faf2e0;">
+<div class="left-menu child-menu">
+	<div class="left-logo"><img src="img/logo-1.png"></div>
+    <ul class="nav">
+        <li>
+            <a href="index.html">
+                <p style="font-size: 20px;">网站首页</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="#">
+                <p style="font-size: 20px;">剧情游戏</p>
+            </a>
+            <i></i>
+            <ul class="child-nav">
+                <div class="bb"></div>
+                <li><a href="game1.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">蕲艾益乡</a></li>
+                <li><a href="game2.html" style="font-size: 16px;font-family: 'kaiti', serif;text-decoration: none">绣启新篇</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="case-list.html">
+                <p>精选案例</p>
+            </a>
+            <i></i>
+        </li>
+        <li class="now">
+            <a href="news-list.html">
+                <p>新闻动态</p>
+            </a>
+            <i></i>
+        </li>
+        <li>
+            <a href="product-list.html">
+                <p>荆楚非遗</p>
+            </a>
+            <i></i>
+        </li>
+    </ul>
+    <div class="menu-box-1"><img src="img/menu-box.png"></div>
+</div>
+
+<script type="text/javascript">
+/*侧边导航隐藏显示事件*/
+	var z = true;
+	$(".menu-box-1").click(function(){
+		if(z == true){
+			$(".left-menu").animate({marginLeft:0,},500);
+			/*$(".content").animate({marginLeft:290,},500).css("width","calc(100% - 290px)");
+			$(".content").addClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/close.png');
+			z = false;
+		}
+		else{
+			z = true;
+			$(".left-menu").animate({marginLeft:-290,},500);
+			/*$(".content").animate({marginLeft:0,width:'100%',},500);
+			$(".content").removeClass("content-1");*/
+			$(".menu-box-1 img").attr('src','img/menu-box.png');
+		}
+		
+	})
+/* --end-- */
+	
+/* 二级菜单显示隐藏效果 */
+	$(".child-nav").hide();
+	$(".nav > li").mouseenter(
+		function(){
+			$(this).children(".child-nav").show().fadeIn(500);
+		}
+	)
+	$(".nav > li").mouseleave(
+		function(){
+			$(this).children(".child-nav").hide().fadeOut(500);
+		}
+	)
+/* -- end -- */	
+
+/* 判断侧边导航的菜单栏高度 */
+	var h = $(".left-menu .nav").height();
+			var h2 = $(window).height();
+			var h3 = h / h2;
+			if(h3 > (54 / 100)){
+				
+				$(".left-menu .nav > li a span").css("display","none");
+			}
+			else{
+				$(".left-menu .nav > li a span").css("display","inline-block");
+			}
+/* -- end -- */	
+</script>
+
+<div class="content">
+	<div class="main-cont">
+    	<ul class="nav-copy fix">
+            <li class="nav-select"><a href="#">新闻详情</a></li>
+            <li>
+            	<i class="change"></i>
+            	<a href="news-list.html" style="font-family: kaiti;">>> 返回上一级</a>
+            </li>
+        </ul>
+        <div class="box">
+        	<div class="main2">
+            	<h1>新匠人飞针走线&nbsp;老手艺因趣生情
+                	<div class="info"><span id="date">2023-12-16</span><span id="writer"><a href="http://wlt.hubei.gov.cn/bmdt/mtjj/202312/t20231216_5007117.shtml" style="text-decoration: none; color: inherit;">阅读原文</a></span></div>
+                	<i class="xian" style="background:rgba(0,0,0,0.2);"></i>
+                </h1>
+                <div class="txt-box">
+                    <img src="img/2.png">
+                    <h2 style="text-align: center;">2019年5月，王炜佳（右一）在武汉市第一聋哑学校教授汉绣。</h2>
+                    <h2 style="font-size: 20px;">守望者名片</h2><br>
+                    <p>	王炜佳，国家级非遗项目汉绣市级代表性传承人，工艺美术师，武汉汉绣艺术有限公司总经理。外公任本荣是汉绣国家级非遗代表性传承人，母亲任炜是汉绣省级传承人。2015年起至今，王炜佳担任武汉汉绣艺术研究院与武汉市第一聋哑学校联合开办的汉绣班技法老师，培养汉绣技术人才。</p>
+					<p>12月6日，武汉被阳光镀上了一层灿金，格外暖意浓浓。</p>
+                    <p>琳琅满目的绣品、华丽繁复的服饰、民俗与现代融合的设计……位于武汉汉口文化体育中心的汉绣工作室，闹中取静，是汉绣武汉市级非遗传承人王炜佳日常工作的地方。这个将传统与现代审美相结合的空间，展示了晚清汉绣残片，包含地域特色的绣品《古黄鹤楼》，还有蕴含巧思的汉绣小品，王炜佳为此付出良多，亦如她对汉绣寄予的情感——因趣生情，坚定守望。</p>
+
+                    <h2 style="font-size: 20px;">外公膝下学汉绣&nbsp;丝缕相传三代人</h2><br>
+					<p>“90后”王炜佳是汉绣之家传承的第六代，打小在外公任本荣的工作室里把玩丝线。那时，这个常常将丝线垂在肩头当辫子的小女孩未曾想到，之后的十余年间，她将与汉绣结下不解之缘。</p>
+                    <p>“这是《贵妃醉酒》中贵妃的戏服，是真正的汉绣重工‘高定’。”在工作室进门的显眼处，一身霞光漫溢的汉绣宫衣夺人眼球。王炜佳介绍，这件戏服使用到了汉绣“平金夹绣”　的表现形式，分层破色、层次分明、对比强烈，金线与丝线层层堆积，呈现出立体的效果，需要几名汉绣工匠耗时一年多才能完成，“演员旋转时裙边散开，在灯光的照射下，金夹绣的特点会让演员金光闪闪。”</p>
+                    <p>汉绣是流行于武汉、荆沙、洪湖一带的传统刺绣技术，富有鲜明地方特色，以针法粗犷、色彩浓艳、构思大胆闻名，“花无正果，热闹为先”正是其美学思想。</p>
+                    <p>“花随玉指添春色，鸟逐金针长羽毛。”百余年前，汉口绣花街绣坊林立、工匠云集，艳丽华美的刺绣、戏衣从这里走向全国。目睹汉绣繁华的任本荣12岁拜师学艺，传承汉绣技艺、推广汉绣文化半个多世纪，留下大量珍贵绣品及图纸。王炜佳的母亲任炜几十年如一日钻研汉绣工艺、技法，同时致力于让汉绣与时俱进。她与服装设计师赵卉洲合作汉绣特色服饰，登上2016年春夏米兰国际时装周，掀起了一股“中国风”。</p>
+                    <p>“汉绣是一门手艺，不论到了什么时候都能靠它吃饭，汉绣也是一门艺术，你一定要把它发扬光大。”任本荣的师傅说过的话，成为他一生的信念，也成为了王炜佳的敬畏和责任。</p>
+
+                    <h2 style="font-size: 20px;">开办汉绣班&nbsp;照亮聋哑学生锦绣人生</h2><br>
+                    <p>“这是我们汉绣班上同学们的作品。”王炜佳的手机里存着不少学生的作品照片，其中一些作品梅花、荷花配色巧妙出新，“绣得都蛮是那个样子，我还蛮骄傲的。”</p>
+                    <P>2014年，任炜在武汉第一聋哑学校公益开设汉绣班，储备汉绣技艺人才的同时，也能帮助解决聋哑学生的就业问题。在母亲的影响下，王炜佳2015年加入了汉绣班的教学，传授非遗技艺。</P>
+                    <p>毕业生黄春勇是王炜佳印象最深刻的学生，他曾不止一次表达自己对汉绣的喜爱，坚持学习了六年汉绣直到毕业。</p>
+                    <p>汉绣传统技法“留水路”，指的是在花瓣重叠、叶片交互时，留出一路清晰的线条，以体现汉绣的立体与层次，但这个词语在手语中极难表达，类似“只可意会”的汉绣概念还有很多。在课堂上，黄春勇立刻明白了“留水路”的含义，并活用手语“空隙”表达，班上的同学马上心领神会，“他是班上为数不多可以说话的学生，就像我们的‘小班长’，帮助我们和同学们沟通。”</p>
+                    <p>汉绣班开班已近十年，但从事汉绣工作的学生屈指可数。今年，黄春勇主动联系王炜佳，希望大四能够来工作室实习，有学生重新拾起绣花针，这让王炜佳和母亲任炜非常欣慰。“培养汉绣人才，就像我们教学时一样，不要把答案灌输给他们，而是种下一颗种子，也许耗时会久一点，但真正的喜爱自然会生根发芽”，王炜佳说。</p>
+
+                    <h2 style="font-size: 20px;">汉绣不是老古董&nbsp;守艺“要有松弛感”</h2><br>
+                    <p>“目前绣得最多的还是传统题材，但汉绣不是老古董。”目前，王炜佳负责运营汉绣工作室，在她的打理下，这方汉绣天地有着浓厚的艺术气息。</p>
+                    <P>“这把扇子是一项‘双非遗’作品。”王炜佳说的扇子是广西圆竹剖丝团扇，整把扇子由一根圆竹均匀剖开制成，绣面则是汉绣菊花图案，两项非遗技艺巧妙融合在一把扇子之中。在王炜佳的推动下，工作室积极进行非遗传承和创新，增加了汉绣体验课、尝试录制制作汉绣短视频，设计了笔记本、丝巾、桌旗等一系列新潮的汉绣文创产品。即便是传统题材的汉绣装饰画，王炜佳也尝试用简约风格的金属画框装裱，适合新中式风格，为汉绣增添了更多年轻现代的气息。</P>
+                    <p>有别于老一辈非遗传承人的“苦守”，王炜佳的讲述中，传递出一种少见的“松弛感”。</p>
+                    <p>“我们这代的汉绣人很幸运，有呵护非遗的大环境，有系统的汉绣教材。”王炜佳介绍，早年学习汉绣时，外公任本荣遵照旧式拜师学艺的传统，靠的是师徒间的口耳相传。出于“教会徒弟、饿死师傅”的顾虑，不少师傅“留一手”，许多传统技法、式样就这样渐渐失传。在任炜的努力下，收集整理了大量文字资料及实物，并参与制定汉绣湖北省地方标准，汉绣有了一套成文的标准。“我们刚刚完成一本汉绣专著，出版后将帮助大家更了解汉绣。”王炜佳说。</p>
+                    <p>浓墨重彩的汉绣，就和武汉人一样，有着风风火火的性格，承载着这片土地上的民俗文化景观。王炜佳认为，新时代的汉绣，需要更具时代气息的表达，“让这项古老工艺更好地发挥时代价值，便是我们新一代手艺人要做的。”</p>
+               	</div>
+                <div class="otherPage">
+                	<a href="news-1.html" class="prev-page">上一篇：<span>“破壁”千年纹样&nbsp;焕新非遗传承</span></a>
+                    <a href="news-3.html" class="next-page">下一篇：<span>非遗民俗文化激活古村经济</span></a>
+                </div>
+            </div>
+       	</div>
+    </div>
+    <div class="footer deep">
+        <div class="tail" style="margin-bottom: 0px;background-color:#373938 ;">
+            <div class="ps-mont">
+                <div class="column">
+                    <div class="ban-img" style="margin-top:10px;"><a href="index.html"><img src="img/logo-f.png"></a></div>
+                    <div class="ban-zi">Copyright © 2023遗路生花小组 All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">常用链接</h1>
+                <p><a href="https://www.ihchina.cn/">中国非物质文化遗产网</a></p>
+                <p><a href="http://wlt.hubei.gov.cn/">湖北非物质文化遗产网</a></p>
+                <p><a href="https://www.fyrhome.cn/">中国非物质文化遗产保护协会</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">网站地图</h1>
+                <p><a href="game1.html">蕲艾益乡</a>&nbsp;&nbsp;<a href="game2.html">绣启新篇</a></p>
+                <p><a href="case-list.html">精选案例</a>&nbsp;&nbsp;<a href="news-list.html">新闻动态</a></p>
+                <p><a href="product-list.html">荆楚非遗展</a></p>
+            </div>
+            <div class="ps-mont">
+                <h1 style="font-size: 20px; color: #a4857d;">联系我们</h1>
+                <p>武汉大学新闻与传播学院</p>
+                <p>邮政编码&nbsp;430072</p>
+                <p>电话&nbsp;027-68754235C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 搜索框事件 */	
+	$("#search").mouseenter(function(){
+		$(this).children("form").css("display","block");
+	})
+	$("#search").mouseleave(function(){
+		$(this).children("form").css("display","none");
+	})
+	
+/* --end-- */
+</script>
+</body>
+</html>
